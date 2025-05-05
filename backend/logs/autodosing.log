@@ -1,0 +1,146 @@
+[2025-04-13T12:40:48.396Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T12:40:48.410Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T12:41:05.389Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T12:41:05.396Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T12:41:44.765Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T12:41:44.776Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T12:46:14.403Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T12:46:14.419Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T12:47:23.574Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T12:47:23.623Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T13:28:50.840Z] [INFO] Running scheduled EC check
+[2025-04-13T13:28:50.866Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T13:28:50.905Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T13:28:50.960Z] [INFO] STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)
+[2025-04-13T13:28:51.001Z] [INFO] Water volume: 75L, Dispensing delay: 5s
+[2025-04-13T13:28:51.041Z] [INFO] Selected fertilizers: [
+  {
+    "id": "fertilizer-pump-a",
+    "name": "Fertilizer Pump A",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-b",
+    "name": "Fertilizer Pump B",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-c",
+    "name": "Fertilizer Pump C",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  }
+]
+[2025-04-13T13:28:51.127Z] [INFO] Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:28:51.193Z] [INFO] Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)
+[2025-04-13T13:28:51.310Z] [INFO] Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:28:51.427Z] [INFO] Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)
+[2025-04-13T13:28:51.553Z] [INFO] Calculated amount for Fertilizer Pump C: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:11.064Z] [INFO] Running scheduled EC check
+[2025-04-13T13:30:11.071Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T13:30:11.114Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T13:30:11.158Z] [INFO] STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)
+[2025-04-13T13:30:11.201Z] [INFO] Water volume: 75L, Dispensing delay: 5s
+[2025-04-13T13:30:11.268Z] [INFO] Selected fertilizers: [
+  {
+    "id": "fertilizer-pump-a",
+    "name": "Fertilizer Pump A",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-b",
+    "name": "Fertilizer Pump B",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-c",
+    "name": "Fertilizer Pump C",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  }
+]
+[2025-04-13T13:30:11.401Z] [INFO] Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:11.464Z] [INFO] Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)
+[2025-04-13T13:30:11.605Z] [INFO] Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:11.705Z] [INFO] Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)
+[2025-04-13T13:30:11.787Z] [INFO] Calculated amount for Fertilizer Pump C: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:11.864Z] [INFO] Will dispense 50mL of Fertilizer Pump C (ID: fertilizer-pump-c)
+[2025-04-13T13:30:11.955Z] [INFO] Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:12.022Z] [INFO] Dispensing 50mL of fertilizer-pump-a
+[2025-04-13T13:30:12.240Z] [INFO] Found actuator for fertilizer-pump-a: Fertilizer Pump A
+[2025-04-13T13:30:31.845Z] [INFO] Running scheduled EC check
+[2025-04-13T13:30:31.860Z] [INFO] Requesting latest readings from SensorController
+[2025-04-13T13:30:31.938Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T13:30:32.012Z] [INFO] STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)
+[2025-04-13T13:30:32.074Z] [INFO] Water volume: 75L, Dispensing delay: 5s
+[2025-04-13T13:30:32.139Z] [INFO] Selected fertilizers: [
+  {
+    "id": "fertilizer-pump-a",
+    "name": "Fertilizer Pump A",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-b",
+    "name": "Fertilizer Pump B",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-c",
+    "name": "Fertilizer Pump C",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  }
+]
+[2025-04-13T13:30:32.278Z] [INFO] Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:32.362Z] [INFO] Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)
+[2025-04-13T13:30:32.484Z] [INFO] Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:32.562Z] [INFO] Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)
+[2025-04-13T13:30:32.679Z] [INFO] Calculated amount for Fertilizer Pump C: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:30:32.821Z] [INFO] Will dispense 50mL of Fertilizer Pump C (ID: fertilizer-pump-c)
+[2025-04-13T13:33:29.776Z] [INFO] Running scheduled EC check
+[2025-04-13T13:33:29.782Z] [INFO] Requesting historical EC readings from SensorController
+[2025-04-13T13:33:29.872Z] [ERROR] Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')
+[2025-04-13T13:33:29.923Z] [INFO] STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)
+[2025-04-13T13:33:29.939Z] [INFO] Water volume: 75L, Dispensing delay: 5s
+[2025-04-13T13:33:29.996Z] [INFO] Selected fertilizers: [
+  {
+    "id": "fertilizer-pump-a",
+    "name": "Fertilizer Pump A",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-b",
+    "name": "Fertilizer Pump B",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  },
+  {
+    "id": "fertilizer-pump-c",
+    "name": "Fertilizer Pump C",
+    "fertilizerAmount": 1,
+    "waterAmount": 1,
+    "priority": 1
+  }
+]
+[2025-04-13T13:33:30.122Z] [INFO] Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:33:30.181Z] [INFO] Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)
+[2025-04-13T13:33:30.355Z] [INFO] Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)
+[2025-04-13T13:33:30.540Z] [INFO] Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)

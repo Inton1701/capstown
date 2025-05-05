@@ -1,0 +1,356 @@
+{
+  "logs": [
+    {
+      "timestamp": "2025-04-13T12:46:14.403Z",
+      "level": "INFO",
+      "message": "Requesting latest readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T12:47:23.574Z",
+      "level": "INFO",
+      "message": "Requesting latest readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:50.840Z",
+      "level": "INFO",
+      "message": "Running scheduled EC check"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:50.866Z",
+      "level": "INFO",
+      "message": "Requesting latest readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:50.960Z",
+      "level": "INFO",
+      "message": "STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.001Z",
+      "level": "INFO",
+      "message": "Water volume: 75L, Dispensing delay: 5s"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.041Z",
+      "level": "INFO",
+      "message": "Selected fertilizers: [\n  {\n    \"id\": \"fertilizer-pump-a\",\n    \"name\": \"Fertilizer Pump A\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-b\",\n    \"name\": \"Fertilizer Pump B\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-c\",\n    \"name\": \"Fertilizer Pump C\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  }\n]"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.127Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.193Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.310Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:51.427Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.064Z",
+      "level": "INFO",
+      "message": "Running scheduled EC check"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.071Z",
+      "level": "INFO",
+      "message": "Requesting latest readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.158Z",
+      "level": "INFO",
+      "message": "STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.201Z",
+      "level": "INFO",
+      "message": "Water volume: 75L, Dispensing delay: 5s"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.268Z",
+      "level": "INFO",
+      "message": "Selected fertilizers: [\n  {\n    \"id\": \"fertilizer-pump-a\",\n    \"name\": \"Fertilizer Pump A\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-b\",\n    \"name\": \"Fertilizer Pump B\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-c\",\n    \"name\": \"Fertilizer Pump C\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  }\n]"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.401Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.464Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.605Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.705Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.787Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump C: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.864Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump C (ID: fertilizer-pump-c)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.955Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:12.022Z",
+      "level": "INFO",
+      "message": "Dispensing 50mL of fertilizer-pump-a"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:31.845Z",
+      "level": "INFO",
+      "message": "Running scheduled EC check"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:31.860Z",
+      "level": "INFO",
+      "message": "Requesting latest readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.012Z",
+      "level": "INFO",
+      "message": "STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.074Z",
+      "level": "INFO",
+      "message": "Water volume: 75L, Dispensing delay: 5s"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.139Z",
+      "level": "INFO",
+      "message": "Selected fertilizers: [\n  {\n    \"id\": \"fertilizer-pump-a\",\n    \"name\": \"Fertilizer Pump A\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-b\",\n    \"name\": \"Fertilizer Pump B\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-c\",\n    \"name\": \"Fertilizer Pump C\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  }\n]"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.278Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.362Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.484Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.562Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump B (ID: fertilizer-pump-b)"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.679Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump C: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.776Z",
+      "level": "INFO",
+      "message": "Running scheduled EC check"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.782Z",
+      "level": "INFO",
+      "message": "Requesting historical EC readings from SensorController"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.923Z",
+      "level": "INFO",
+      "message": "STARTING FERTILIZER DISPENSING to increase EC by 3.00 mS/cm (scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.939Z",
+      "level": "INFO",
+      "message": "Water volume: 75L, Dispensing delay: 5s"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.996Z",
+      "level": "INFO",
+      "message": "Selected fertilizers: [\n  {\n    \"id\": \"fertilizer-pump-a\",\n    \"name\": \"Fertilizer Pump A\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-b\",\n    \"name\": \"Fertilizer Pump B\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  },\n  {\n    \"id\": \"fertilizer-pump-c\",\n    \"name\": \"Fertilizer Pump C\",\n    \"fertilizerAmount\": 1,\n    \"waterAmount\": 1,\n    \"priority\": 1\n  }\n]"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:30.122Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump A: 50mL (ratio: 1, scale: 2)"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:30.181Z",
+      "level": "INFO",
+      "message": "Will dispense 50mL of Fertilizer Pump A (ID: fertilizer-pump-a)"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:30.355Z",
+      "level": "INFO",
+      "message": "Calculated amount for Fertilizer Pump B: 50mL (ratio: 1, scale: 2)"
+    }
+  ],
+  "errors": [
+    {
+      "timestamp": "2025-04-13T12:46:14.419Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    },
+    {
+      "timestamp": "2025-04-13T12:47:23.623Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    },
+    {
+      "timestamp": "2025-04-13T13:28:50.905Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.114Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    },
+    {
+      "timestamp": "2025-04-13T13:30:31.938Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    },
+    {
+      "timestamp": "2025-04-13T13:33:29.872Z",
+      "level": "ERROR",
+      "message": "Error fetching latest sensor readings: Cannot read properties of undefined (reading 'json')"
+    }
+  ],
+  "structured": [
+    {
+      "timestamp": "2025-04-13T13:28:51.088Z",
+      "label": "Selected fertilizers",
+      "data": [
+        {
+          "id": "fertilizer-pump-a",
+          "name": "Fertilizer Pump A",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-b",
+          "name": "Fertilizer Pump B",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-c",
+          "name": "Fertilizer Pump C",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-04-13T13:30:11.327Z",
+      "label": "Selected fertilizers",
+      "data": [
+        {
+          "id": "fertilizer-pump-a",
+          "name": "Fertilizer Pump A",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-b",
+          "name": "Fertilizer Pump B",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-c",
+          "name": "Fertilizer Pump C",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-04-13T13:30:32.212Z",
+      "label": "Selected fertilizers",
+      "data": [
+        {
+          "id": "fertilizer-pump-a",
+          "name": "Fertilizer Pump A",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-b",
+          "name": "Fertilizer Pump B",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-c",
+          "name": "Fertilizer Pump C",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-04-13T13:33:30.061Z",
+      "label": "Selected fertilizers",
+      "data": [
+        {
+          "id": "fertilizer-pump-a",
+          "name": "Fertilizer Pump A",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-b",
+          "name": "Fertilizer Pump B",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        },
+        {
+          "id": "fertilizer-pump-c",
+          "name": "Fertilizer Pump C",
+          "fertilizerAmount": 1,
+          "waterAmount": 1,
+          "priority": 1
+        }
+      ]
+    }
+  ]
+}

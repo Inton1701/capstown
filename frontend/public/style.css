@@ -1,0 +1,635 @@
+:root {
+    /* Light Mode - Forest/Mint Theme */
+    --bg-color: #f4f9f4;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-header: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+    --text-color: #495057; /* Changed from #2d3047 to #495057 */
+    --text-color-secondary: #495057;
+    --accent-color: #40916c;
+    --success-color: #52b788;
+    --warning-color: #ffd166;
+    --danger-color: #ef476f;
+    --glass-effect: rgba(82, 183, 136, 0.1);
+    --border-color: #e9ecef;
+    --btn-control-light: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+  
+    /* Keep existing dark mode specific variables */
+    --card-header-dark: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+    --input-bg-dark: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+    --text-color-dark: #caf0f8;
+    --text-muted-dark: #90e0ef;
+  }
+  
+  
+  .dark-mode {
+    --bg-color: linear-gradient(135deg, #03045e 0%, #023e8a 100%);
+    --card-bg: rgba(2, 62, 138, 0.9);
+    --card-header: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+    --text-color: var(--text-color-dark);
+    --accent-color: #90e0ef;
+    --glass-effect: rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 var(--glass-effect);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background: var(--card-header);
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+  }
+  
+  .sensor-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--accent-color), #00b4d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+
+    
+  }
+  
+  .actuator-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 16px 0 var(--glass-effect);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .actuator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px 0 var(--glass-effect);
+  }
+  
+  .actuator-card label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: auto;
+  }
+  
+  .status-idle {
+    background-color: var(--warning-color);
+  }
+  
+  .status-active {
+    background-color: var(--success-color);
+  }
+  
+  .status-undetected {
+    background-color: var(--danger-color);
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 1rem;
+  }
+  
+  .calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--glass-effect);
+    transition: background 0.3s ease;
+  }
+  
+  .calendar-day.active {
+    background: var(--success-color);
+    color: white;
+  }
+  
+  .calendar-day:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+  
+  /* Icon color overrides */
+  .fa-water {
+    color: #00b4d8;
+  }
+  
+  .fa-thermometer-half {
+    color: #ff6b6b;
+  }
+  
+  .fa-tint {
+    color: #4dabf7;
+  }
+  
+  .fa-up-long {
+    color: #4dabf7;
+  }
+  
+  .fa-down-long {
+    color: #ff6b6b;
+  }
+  
+  .fa-flask {
+    color: #69db7c;
+  }
+  
+  .fa-wind {
+    color: #a5d8ff;
+  }
+  
+  .fa-bolt {
+    color: #ffd43b;
+  }
+  
+  /* Chart animations */
+  .chart-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: chartEnter 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes chartEnter {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  
+  /* Light Mode (Moon) */
+  #theme-icon.fa-moon {
+    color: grey;
+    transition: color 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+    background: grey;
+  }
+  
+  #theme-toggle:hover #theme-icon.fa-moon {
+    color: white;
+  }
+  
+  /* Dark Mode (Sun) */
+  .dark-mode #theme-icon.fa-sun {
+    color: yellow;
+  }
+  
+  .dark-mode #theme-toggle:hover {
+    background: yellow;
+  }
+  
+  .dark-mode #theme-toggle:hover #theme-icon.fa-sun {
+    color: black;
+  }
+  
+  /* Add more animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .floating-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .pulsing-value {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  #plant-status {
+    max-height: 300px; /* Optional: limit the height of the image */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the area */
+  }
+  
+  /* Add new status classes for sensors */
+  .sensor-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+  }
+  
+  .status-optimal {
+    color: var(--success-color);
+  }
+  
+  .status-warning {
+    color: var(--warning-color);
+  }
+  
+  .status-critical {
+    color: var(--danger-color);
+  }
+  
+  .status-running {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .actuator-status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-size: x-small;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+  
+  .status-idle {
+    background-color: var(--warning-color);
+    color: white;
+  }
+  
+  .ac-status-idle {
+    background-color: #00b4d8;
+    color: white;
+  }
+  
+  .ac-status-running {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .ac-status-off {
+    background-color: #adb5bd;
+    color: white;
+  }
+  
+  .ac-status-error {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .card-header h5 .fas {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .card-header h5 .fas:hover {
+    color: white;
+  }
+  
+  .card-header h5 .fa-info-circle,
+  .card-header h5 .fa-cog {
+    color: white;
+  }
+  
+  .card-header h5 {
+    display: flex;
+    justify-content: flex-start; /* Changed from space-between to flex-start */
+    align-items: center;
+    width: 100%;
+    color: white;
+    margin: 0;
+  }
+  
+  .card-header h5 .fas {
+    margin-right: 8px; /* Changed from margin-left to margin-right */
+    color: white;
+  }
+  
+  /* Add this to ensure proper icon spacing */
+  .card-header h5 i:first-child {
+    margin-right: 0.5rem;
+  }
+  
+  /* Optional: If you want to put any additional icons on the right */
+  .card-header h5 .action-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* Apple Green when checked */
+  .custom-switch .form-check-input:checked {
+    background-color: #8DB600;  /* Apple Green */
+    border-color: #8DB600;
+    outline: none;
+  }
+  
+  .custom-switch .form-check-input:focus {
+    outline: none;
+    box-shadow: none; /* Removes Bootstrap's default focus shadow */
+    border: none;
+  }
+  
+  /* Ensure the switch thumb is also visible */
+  .custom-switch .form-check-input:checked::before {
+    background-color: white;
+    outline: none;
+  }
+  
+  .dark-mode .form-select, .dark-mode .form-control, .dark-mode .list-group .list-group-item {
+    background-color: var(--card-header-dark) !important;
+    border: 1px solid #0096c7;
+    color: var(--text-color-dark) !important;
+  }
+  
+  .dark-mode select option {
+    background-color: #023e8a !important;
+    color: var(--text-color-dark) !important;
+  }
+  
+  .dark-mode .form-control:focus {
+    background-color: var(--input-bg-dark);
+    border-color: #90e0ef;
+    box-shadow: 0 0 0 0.2rem rgba(144, 224, 239, 0.25);
+  }
+  
+  /* Gradient button styling */
+  .btn-gradient {
+    background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, #5a8d3e 0%, #77B254 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-gradient:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  /* Specific styles for the theme toggle button */
+  #theme-toggle.btn-gradient {
+    background: linear-gradient(135deg, #77B254 0%, #5a8d3e 100%);
+    color: white;
+  }
+  
+  #theme-toggle.btn-gradient:hover {
+    background: linear-gradient(135deg, #5a8d3e 0%, #77B254 100%);
+  }
+  
+  /* Adjust the plus/minus buttons */
+  .dark-mode .btn-control {
+    background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode .btn-control:hover {
+    background: linear-gradient(135deg, #028dd8 0%, #0ab2eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-control {
+    background: var(--btn-control-light);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-control:hover {
+    background: linear-gradient(135deg, #85c75e 0%, #6ba84a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white !important;
+  }
+  
+  .btn-control:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  .card-header .fas {
+    transition: transform 0.2s ease;
+  }
+  
+  .card-header .fas:hover {
+    transform: scale(1.15);
+  }
+  
+  .sensor-limit-card {
+    background: rgba(144, 224, 239, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ensure text color adapts to dark mode */
+  .dark-mode .text-muted {
+    color: var(--text-muted-dark) !important;
+  }
+  
+  .dark-mode .form-label, .dark-mode .form-control::placeholder {
+    color: var(--text-color-dark) !important;
+  }
+  
+  /* Input styles for light and dark mode */
+  input[type="number"], input[type="time"], input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="date"], input[type="month"], input[type="week"], input[type="datetime-local"], select, textarea {
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  input[type="number"]:focus, input[type="time"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="datetime-local"]:focus, select:focus, textarea:focus {
+    background-color: var(--card-bg);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .dark-mode input[type="number"], .dark-mode input[type="time"], .dark-mode input[type="text"], .dark-mode input[type="password"], .dark-mode input[type="email"], .dark-mode input[type="url"], .dark-mode input[type="search"], .dark-mode input[type="tel"], .dark-mode input[type="date"], .dark-mode input[type="month"], .dark-mode input[type="week"], .dark-mode input[type="datetime-local"], .dark-mode select, .dark-mode textarea {
+    background-color: var(--card-header-dark);
+    border: 1px solid #0096c7;
+    color: var(--text-color-dark);
+  }
+  
+  .dark-mode input[type="number"]::placeholder, .dark-mode input[type="time"]::placeholder, .dark-mode input[type="text"]::placeholder, .dark-mode input[type="password"]::placeholder, .dark-mode input[type="email"]::placeholder, .dark-mode input[type="url"]::placeholder, .dark-mode input[type="search"]::placeholder, .dark-mode input[type="tel"]::placeholder, .dark-mode input[type="date"]::placeholder, .dark-mode input[type="month"]::placeholder, .dark-mode input[type="week"]::placeholder, .dark-mode input[type="datetime-local"]::placeholder, .dark-mode select::placeholder, .dark-mode textarea::placeholder {
+    color: var(--text-color-dark);
+  }
+  
+  .dark-mode input[type="number"]:focus, .dark-mode input[type="time"]:focus, .dark-mode input[type="text"]:focus, .dark-mode input[type="password"]:focus, .dark-mode input[type="email"]:focus, .dark-mode input[type="url"]:focus, .dark-mode input[type="search"]:focus, .dark-mode input[type="tel"]:focus, .dark-mode input[type="date"]:focus, .dark-mode input[type="month"]:focus, .dark-mode input[type="week"]:focus, .dark-mode input[type="datetime-local"]:focus, .dark-mode select:focus, .dark-mode textarea:focus {
+    background-color: var(--input-bg-dark);
+    border-color: #90e0ef;
+    box-shadow: 0 0 0 0.2rem rgba(144, 224, 239, 0.25);
+  }
+
+  /* Dark mode override for sensor value */
+  .dark-mode .sensor-value {
+    /* Gradient using card header dark colors */
+    background: linear-gradient(45deg, #00a6ff, #68d2f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Modal Styles */
+.modal-content {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 var(--glass-effect);
+}
+
+.modal-header {
+  background: var(--card-header);
+  color: white;
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+  background: var(--card-bg);
+  border-radius: 0 0 15px 15px;
+}
+
+.modal-body {
+  color: var(--text-color);
+}
+
+/* Dark Mode Overrides */
+.dark-mode .modal-content {
+  background: var(--card-bg);
+  border: 1px solid rgba(144, 224, 239, 0.1);
+}
+
+.dark-mode .modal-header {
+  background: var(--card-header-dark);
+}
+
+.dark-mode .modal-footer {
+  border-top: 1px solid rgba(144, 224, 239, 0.1);
+}
+
+/* Alert Styling */
+.dark-mode .alert-info {
+  background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+  border: none;
+  color: var(--text-color-dark);
+}
+
+.alert-info {
+  background: #52b78874;
+  border: none;
+  color: white;
+}
+
+/* Button Group Styling */
+.btn-group .btn-outline-success {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.btn-group .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.dark-mode .btn-group .btn-outline-success {
+  border-color: #90e0ef;
+  color: #90e0ef;
+}
+
+.dark-mode .btn-group .btn-outline-primary {
+  border-color: #0096c7;
+  color: #0096c7;
+}
+
+.dark-mode .btn-group .btn-success.active {
+  background-color: #90e0ef;
+  border-color: #90e0ef;
+}
+
+.dark-mode .btn-group .btn-primary.active {
+  background-color: #0096c7;
+  border-color: #0096c7;
+}
+
+/* Input Fields */
+.modal-body .form-control {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.dark-mode .modal-body .form-control {
+  background-color: rgba(0, 150, 199, 0.1);
+  border: 1px solid #0096c7;
+  color: var(--text-color-dark);
+}
+
+.dark-mode .modal-body .form-control:focus {
+  background-color: rgba(0, 150, 199, 0.2);
+  border-color: #90e0ef;
+  box-shadow: 0 0 0 0.2rem rgba(144, 224, 239, 0.25);
+}
+
+/* Labels */
+.modal-body .form-label {
+  color: var(--text-color);
+}
+
+.dark-mode .modal-body .form-label {
+  color: var(--text-color-dark);
+}
+
+/* Small text and hints */
+.modal-body .text-muted {
+  color: var(--text-color-secondary) !important;
+}
+
+.dark-mode .modal-body .text-muted {
+  color: var(--text-muted-dark) !important;
+}
+
+/* Modal backdrop */
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+.dark-mode .modal-backdrop.show {
+  opacity: 0.8;
+}
