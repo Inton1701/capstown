@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const { PORT } = require('./config/config');
 const bodyParser = require('body-parser');
 const initializeActuators = require('./utils/initActuators');
+const initializeSensors = require('./utils/initSensors');
 const http = require('http');
 const scheduler = require('./services/scheduler');
 const ruleService = require('./services/ruleService');
@@ -32,6 +33,10 @@ connectDB()
         try {
             await initializeActuators();
             console.log('Actuators initialized successfully');
+            
+            await initializeSensors();
+            console.log('Sensors initialized successfully');
+            
             initializeAutoDosing();
             
             // Ensure Python model server is running
@@ -43,7 +48,7 @@ connectDB()
                 console.warn('Plant analysis will fall back to JavaScript implementation');
             }
         } catch (error) {
-            console.error('Error initializing actuators:', error);
+            console.error('Error initializing system components:', error);
         }
     })
     .catch(err => {
